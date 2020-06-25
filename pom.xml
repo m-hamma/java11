@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.hamma.multimodulemavenproject</groupId>
+	<artifactId>multimodulemavenproject</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+	<name>multimodulemavenproject</name>
+	<modules>
+		<module>entitymodule</module>
+		<module>daomodule</module>
+		<module>userdaomodule</module>
+		<module>mainappmodule</module>
+	</modules>
+	
+	<properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>11</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <lombock.version>1.18.0</lombock.version>
+        <compiler.maven.plugin.version>3.8.0</compiler.maven.plugin.version>
+        <lombok.maven.plugin.version>1.16.22.0</lombok.maven.plugin.version>
+    </properties>
+    
+	<build>
+		<pluginManagement>
+			<plugins>
+				
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${compiler.maven.plugin.version}</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <annotationProcessorPaths>
+                            <path>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                                <version>${lombock.version}</version>
+                            </path>
+                        </annotationProcessorPaths>
+                    </configuration>
+                </plugin>
+            
+
+			</plugins>
+		</pluginManagement>
+	</build>
+
+
+</project>

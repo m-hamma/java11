@@ -1,0 +1,6 @@
+module com.hamma.userdaomodule {
+    requires com.hamma.entitymodule;
+    requires com.hamma.daomodule;
+    provides com.hamma.daomodule.Dao with com.hamma.userdaomodule.UserDao;
+    exports com.hamma.userdaomodule;
+}

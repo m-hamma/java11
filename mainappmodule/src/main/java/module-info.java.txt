@@ -1,0 +1,6 @@
+module com.hamma.mainappmodule {
+    requires com.hamma.entitypmodule;
+    requires com.hamma.userdaopmodule;
+    requires com.hamma.daopmodule;
+    uses com.hamma.daopmodule.Dao;
+}
