@@ -10,7 +10,7 @@
 	</parent>
 
 	<groupId>com.hamma.userdamodule</groupId>
-	<artifactId>userdamodule</artifactId>
+	<artifactId>userdaomodule</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
 	<name>userdaomodule</name>
