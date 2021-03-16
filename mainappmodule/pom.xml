@@ -27,7 +27,7 @@
 			<version>1.0</version>
 		</dependency>
 		<dependency>
-			<groupId>com.hamma.daomodule</groupId>
+			<groupId>com.hamma.userdaomodule</groupId>
 			<artifactId>userdaomodule</artifactId>
 			<version>1.0</version>
 		</dependency>

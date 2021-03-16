@@ -9,7 +9,7 @@
 		<version>1.0</version>
 	</parent>
 
-	<groupId>com.hamma.userdamodule</groupId>
+	<groupId>com.hamma.userdaomodule</groupId>
 	<artifactId>userdaomodule</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>

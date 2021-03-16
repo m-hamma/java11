@@ -12,16 +12,31 @@ import com.hamma.entity.User;
 
 public class UserDao implements Dao<User> {
  
-    private final Map<Integer, User> users;
- 
+    private Map<Integer, User> users;
+    
     // standard constructor
  
-    @Override
+    public UserDao(Map<Integer, User> users2) {
+		this.users = users2;
+	}
+
+
+
+	public UserDao() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+	@Override
     public Optional<User> findById(int id) {
         return Optional.ofNullable(users.get(id));
     }
  
-    @Override
+   
+
+	@Override
     public List<User> findAll() {
         return new ArrayList<>(users.values());
     }
