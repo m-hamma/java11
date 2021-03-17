@@ -1,22 +1,13 @@
 package com.hamma.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
+@Data
+@AllArgsConstructor
 public class User {
  
     private String name;
-
-	public User(String name) {
-		super();
-		this.name = name;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String  name) {
-		this.name = name;
-	}
-    
- 
     // standard constructor / getter / toString
  
 }
