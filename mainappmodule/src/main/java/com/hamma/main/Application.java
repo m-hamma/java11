@@ -8,9 +8,14 @@ import com.hamma.dao.Dao;
 import com.hamma.dtos.UserDto;
 import com.hamma.entity.User;
 import com.hamma.udao.UserDao;
-import org.mapstruct.factory.Mappers;
+//import org.mapstruct.factory.Mappers;
 
 //mvn -q clean compile exec:java -Dexec.mainClass="com.hamma.main.Application"
+/*
+ * Pour intyégrer lombok a eclipse, ajouter ces deux lignes a eclipse.ini apres vmargs
+ * -javaagent:/usr/lib/jvm/jdk-11.0.10/lib/lombok.jar
+ * -Xbootclasspath/a:/usr/lib/jvm/jdk-11.0.10/lib/lombok.jar
+ */
 public class Application {
 	private static UserMapper mapper = Mappers.getMapper(UserMapper.class);
 	
