@@ -1,4 +1,4 @@
-package com.hamma.main;
+package com.hamma.app;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,7 @@ import com.hamma.dao.Dao;
 import com.hamma.dtos.UserDto;
 import com.hamma.entity.User;
 import com.hamma.udao.UserDao;
-//import org.mapstruct.factory.Mappers;
+import org.mapstruct.factory.Mappers;
 
 //mvn -q clean compile exec:java -Dexec.mainClass="com.hamma.main.Application"
 /*
@@ -23,10 +23,11 @@ public class Application {
 	public static void main(String[] args) {
         Map<Integer, User> users = new HashMap<>();
         
-        final User user1=new User();
+        final User user1 = new User();
         user1.setName("POP");
         user1.setFirstName("Julie");
-        final User user2=new User();
+        
+        final User user2 = new User();
         user2.setName("POPI");
         user2.setFirstName("Pepa");
         
@@ -36,7 +37,7 @@ public class Application {
         Dao<User> userDao = new UserDao(users);
         userDao.findAll().forEach(e->{
         	UserDto userDto = mapper.toDto(e);
-        	System.out.println(userDto.getName()+ "------"+userDto.getFirstName());
+        	System.out.println(userDto.getFirstName()+ "------"+userDto.getName());
         });
     }   
 }
