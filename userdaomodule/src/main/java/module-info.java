@@ -1,6 +1,7 @@
  module com.hamma.userdaomodule {
 	requires transitive java.compiler;
 	requires java.sql;
+	requires transitive org.mapstruct.processor;
 	requires static org.mapstruct;
 	requires transitive com.hamma.entitymodule ;
     requires com.hamma.daomodule;

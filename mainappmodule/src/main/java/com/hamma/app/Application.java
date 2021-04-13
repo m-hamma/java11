@@ -36,6 +36,7 @@ public class Application {
         
         Dao<User> userDao = new UserDao(users);
         userDao.findAll().forEach(e->{
+
         	UserDto userDto = mapper.toDto(e);
         	System.out.println(userDto.getFirstName()+ "------"+userDto.getName());
         });
