@@ -1,4 +1,5 @@
  module com.hamma.userdaomodule {
+	 requires static lombok;
 	requires transitive java.compiler;
 	requires java.sql;
 	requires transitive org.mapstruct.processor;
@@ -8,4 +9,5 @@
     provides com.hamma.dao.Dao with com.hamma.udao.UserDao;
     exports com.hamma.udao;
     exports com.hamma.mapper;
+    exports com.hamma.dtos;
 }
