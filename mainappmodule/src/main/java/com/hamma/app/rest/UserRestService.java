@@ -1,5 +1,7 @@
 package com.hamma.app.rest;
 
+import java.io.IOException;
+import java.net.Authenticator;
 import java.net.PasswordAuthentication;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -38,14 +40,16 @@ public class UserRestService<T> {
 		return null;
 	}
 
-	public HttpResponse<String> exempleAuthCon() {
+	public HttpResponse<String> exempleAuthCon() throws IOException, InterruptedException, URISyntaxException {
+		HttpRequest request = HttpRequest.newBuilder().uri(new URI("https://postman-echo.com/get"))
+				.header("key1", "value1").header("key2", "value2").GET().build();
 		HttpResponse<String> response = HttpClient.newBuilder().authenticator(new Authenticator() {
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
 				return new PasswordAuthentication("username", "password".toCharArray());
 			}
-		}).build().send(request, HttpResponse.BodyHandler.asString());
-		return reponse;
+		}).build().send(request, null/*HttpResponse.BodyHandler.asString()*/);
+		return response;
 	}
 
 }
