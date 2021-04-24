@@ -15,6 +15,8 @@ import org.mapstruct.factory.Mappers;
  * Pour intégrer lombok a eclipse, ajouter ces deux lignes a eclipse.ini apres vmargs
  * -javaagent:/usr/lib/jvm/jdk-11.0.10/lib/lombok.jar
  * -Xbootclasspath/a:/usr/lib/jvm/jdk-11.0.10/lib/lombok.jar
+ * 
+ * mvn versions:display-dependency-updates
  */
 public class Application {
 	private static UserMapper mapper = Mappers.getMapper(UserMapper.class);
