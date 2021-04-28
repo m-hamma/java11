@@ -9,6 +9,7 @@ import com.hamma.dtos.UserDto;
 import com.hamma.entity.User;
 import com.hamma.udao.UserDao;
 import org.mapstruct.factory.Mappers;
+import java.util.function.Function;
 
 //mvn -q clean compile exec:java -Dexec.mainClass="com.hamma.main.Application"
 /*
@@ -20,7 +21,16 @@ import org.mapstruct.factory.Mappers;
  */
 public class Application {
 	private static UserMapper mapper = Mappers.getMapper(UserMapper.class);
-	
+	public static class MyState {
+	    int iterations = 1000;
+	    String initial = "abc";
+	    String suffix = "def";
+	}
+	static class AnotherHelper {
+        void print() {
+            System.out.println("Printing from AnotherHelper");
+        }
+    }
     @SuppressWarnings("unchecked")
 	public static void main(String[] args) {
         Map<Integer, User> users = new HashMap<>();
@@ -42,5 +52,19 @@ public class Application {
         	UserDto userDto = mapper.toDto(e);
         	System.out.println(userDto.getFirstName()+ "------"+userDto.getName());
         });
+    	Function<String, Void> print = (var s) -> {
+    	    System.out.println(s);
+    	    return null;
+    	};
+    	print.apply("Hello World !");
+    	var sb = new StringBuffer("abc");
+    	sb.append("def");
+    	
+    	/* Remark the way we create an instance of a static inner class
+        is not the same as for inner classes */
+       HelperClass.InnerHelper h1 = new HelperClass.InnerHelper();
+       h1.print(); // will print: Printing from HelperClass
+       AnotherHelper h2 = new AnotherHelper();
+       h2.print(); // will print: Printing from AnotherHelper
     }   
 }
