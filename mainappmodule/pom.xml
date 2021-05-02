@@ -18,18 +18,21 @@
 		<dependency>
 			<groupId>com.hamma.entitymodule</groupId>
 			<artifactId>entitymodule</artifactId>
-			<version>1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.hamma.daomodule</groupId>
 			<artifactId>daomodule</artifactId>
-			<version>1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.hamma.userdaomodule</groupId>
 			<artifactId>userdaomodule</artifactId>
-			<version>1.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.mapstruct</groupId>
 			<artifactId>mapstruct</artifactId>
