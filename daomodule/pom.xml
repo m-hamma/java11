@@ -10,7 +10,6 @@
 	</parent>
 
 	<artifactId>daomodule</artifactId>
-	<version>1.0</version>
 	<packaging>jar</packaging>
 	<name>daomodule</name>
 <dependencies>
