@@ -9,10 +9,14 @@
 		<version>1.0</version>
 	</parent>
 
-	<groupId>com.hamma.entitymodule</groupId>
 	<artifactId>entitymodule</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
 	<name>entitymodule</name>
-
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+	</dependencies>
 </project>

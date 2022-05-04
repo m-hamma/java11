@@ -25,7 +25,40 @@
         <compiler.maven.plugin.version>3.8.0</compiler.maven.plugin.version>
         <lombok.maven.plugin.version>1.16.22.0</lombok.maven.plugin.version>
     </properties>
-    
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+    </dependencies>
+    <dependencyManagement>
+
+        <dependencies>
+            <dependency>
+                <groupId>com.hamma.multimodulemavenproject</groupId>
+                <artifactId>entitymodule</artifactId>
+                <version>1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hamma.multimodulemavenproject</groupId>
+                <artifactId>daomodule</artifactId>
+                <version>1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hamma.multimodulemavenproject</groupId>
+                <artifactId>userdaomodule</artifactId>
+                <version>1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.24</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
 	<build>
 		<pluginManagement>
 			<plugins>

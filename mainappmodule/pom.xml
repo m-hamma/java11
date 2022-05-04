@@ -9,7 +9,6 @@
 		<version>1.0</version>
 	</parent>
 
-	<groupId>com.hamma.mainappmodule</groupId>
 	<artifactId>mainappmodule</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
@@ -17,19 +16,26 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.hamma.entitymodule</groupId>
+			<groupId>com.hamma.multimodulemavenproject</groupId>
 			<artifactId>entitymodule</artifactId>
-			<version>1.0</version>
 		</dependency>
 		<dependency>
-			<groupId>com.hamma.daomodule</groupId>
+			<groupId>com.hamma.multimodulemavenproject</groupId>
 			<artifactId>daomodule</artifactId>
-			<version>1.0</version>
 		</dependency>
 		<dependency>
-			<groupId>com.hamma.daomodule</groupId>
+			<groupId>com.hamma.multimodulemavenproject</groupId>
 			<artifactId>userdaomodule</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.hamma.userdamodule</groupId>
+			<artifactId>userdamodule</artifactId>
 			<version>1.0</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 </project>

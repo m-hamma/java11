@@ -1,4 +1,10 @@
-package com.hamma;
+package com.hamma.main;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.hamma.dao.Dao;
+import com.hamma.entity.User;
+import com.hamma.userdao.UserDao;
 public class Application {
      
     public static void main(String[] args) {
