@@ -7,8 +7,7 @@ import com.hamma.mapper.UserMapper;
 import com.hamma.dao.Dao;
 import com.hamma.dtos.UserDto;
 import com.hamma.entity.User;
-import com.hamma.udao.UserDao;
-import org.mapstruct.factory.Mappers;
+import com.hamma.userdao.UserDao;
 import java.util.function.Function;
 
 //mvn -q clean compile exec:java -Dexec.mainClass="com.hamma.main.Application"
@@ -20,7 +19,8 @@ import java.util.function.Function;
  * mvn versions:display-dependency-updates
  */
 public class Application {
-	private static UserMapper mapper = Mappers.getMapper(UserMapper.class);
+	private static UserMapper mapper = null;
+            //Mappers.getMapper(UserMapper.class);
 	public static class MyState {
 	    int iterations = 1000;
 	    String initial = "abc";
@@ -35,12 +35,10 @@ public class Application {
 	public static void main(String[] args) {
         Map<Integer, User> users = new HashMap<>();
         
-        final User user1 = new User();
-        user1.setName("POP");
+        final User user1 = new User("POP");
         user1.setFirstName("Julie");
         
-        final User user2 = new User();
-        user2.setName("POPI");
+        final User user2 = new User("POPI");
         user2.setFirstName("Pepa");
         
         users.put(1,user1);
